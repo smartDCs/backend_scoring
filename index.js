@@ -48,7 +48,7 @@ io.on("connection", (socket) => {
       canchaClients[cancha].clientes.push(socket.id);
     }
 
-   // console.log(`Cliente identificado: ${socket.id} como ${type} en ${cancha}`);
+    console.log(`Cliente identificado: ${socket.id} como ${type} en ${cancha}`);
     // Emitir el conteo actualizado a todos los clientes de la cancha
     io.to(cancha).emit("clientCount", {
       arbitros: canchaClients[cancha].arbitros.length,
@@ -59,7 +59,7 @@ io.on("connection", (socket) => {
 
   // Manejar mensajes del cliente
   socket.on("message", (body) => {
-   // console.log(`Mensaje de ${socket.id}:`, body);
+    console.log(`Mensaje de ${socket.id}:`, body);
 
     // Enviar mensaje a un cliente específico usando su nombre
     const targetCancha = body.cancha; // Cambia esto según necesites
