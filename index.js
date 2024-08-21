@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 const io = new SocketServer(server, {
   cors: {
-    origin: "http://localhost:5173", // O el puerto en el que está tu aplicación ReactJS
+    origin: "'https://scoring-am.web.app", // O el puerto en el que está tu aplicación ReactJS
   },
 });
 const __dirname = dirname(fileURLToPath(import.meta.url));
