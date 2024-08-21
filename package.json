@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon server/index.js",
     "build": "npm run build",
-    "start": "node server/index.js"
+    "start": "node index.js"
   },
   "author": "NexusEmbed",
   "license": "ISC",
