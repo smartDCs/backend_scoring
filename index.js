@@ -10,6 +10,11 @@ import cors from "cors";
 // Inicializaciones
 const app = express();
 const server = http.createServer(app);
+
+app.get('/', (req, res) => {
+  res.send('Servidor funcionando correctamente');
+});
+
 const io = new SocketServer(server, {
   cors: {
     origin: "http://localhost:5173", // O el puerto en el que está tu aplicación ReactJS
